@@ -1,0 +1,81 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "FirstStep Mobile (Auth0)",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "toolArgs": [
+        "-Pauth0Domain=dev-0yrs1pb6s37h8s6u.us.auth0.com",
+        "-Pauth0Scheme=firststep"
+      ],
+      "args": [
+        "--dart-define=AUTH0_DOMAIN=dev-0yrs1pb6s37h8s6u.us.auth0.com",
+        "--dart-define=AUTH0_CLIENT_ID=GqPHk4oOClQaMdxwMeLOc15awKEhknkS",
+        "--dart-define=AUTH0_SCHEME=firststep",
+        "--dart-define=API_BASE_URL=http://10.0.2.2:5000",
+        "--dart-define=WEB_APP_URL=https://app.firststepjob.com",
+        "--dart-define=AUTH0_GITHUB=false"
+      ]
+    },
+    {
+      "name": "Emulator",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "deviceId": "emulator-5554",
+      "toolArgs": [
+        "-Pauth0Domain=dev-0yrs1pb6s37h8s6u.us.auth0.com",
+        "-Pauth0Scheme=firststep"
+      ],
+      "args": [
+        "--dart-define=AUTH0_DOMAIN=dev-0yrs1pb6s37h8s6u.us.auth0.com",
+        "--dart-define=AUTH0_CLIENT_ID=GqPHk4oOClQaMdxwMeLOc15awKEhknkS",
+        "--dart-define=AUTH0_SCHEME=firststep",
+        "--dart-define=API_BASE_URL=http://10.0.2.2:5000",
+        "--dart-define=WEB_APP_URL=https://app.firststepjob.com",
+        "--dart-define=AUTH0_GITHUB=false"
+      ]
+    },
+    {
+      "name": "Phone",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "deviceId": "YOUR_PHONE_ID",
+      "toolArgs": [
+        "-Pauth0Domain=dev-0yrs1pb6s37h8s6u.us.auth0.com",
+        "-Pauth0Scheme=firststep"
+      ],
+      "args": [
+        "--dart-define=AUTH0_DOMAIN=dev-0yrs1pb6s37h8s6u.us.auth0.com",
+        "--dart-define=AUTH0_CLIENT_ID=GqPHk4oOClQaMdxwMeLOc15awKEhknkS",
+        "--dart-define=AUTH0_SCHEME=firststep",
+        "--dart-define=API_BASE_URL=http://10.0.2.2:5000",
+        "--dart-define=WEB_APP_URL=https://app.firststepjob.com",
+        "--dart-define=AUTH0_GITHUB=false"
+      ]
+    },
+    {
+      "name": "iOS Simulator (Auth0)",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "args": [
+        "--dart-define=AUTH0_DOMAIN=dev-0yrs1pb6s37h8s6u.us.auth0.com",
+        "--dart-define=AUTH0_CLIENT_ID=GqPHk4oOClQaMdxwMeLOc15awKEhknkS",
+        "--dart-define=AUTH0_SCHEME=firststep",
+        "--dart-define=API_BASE_URL=http://127.0.0.1:5000",
+        "--dart-define=WEB_APP_URL=https://app.firststepjob.com",
+        "--dart-define=AUTH0_GITHUB=false"
+      ]
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Emulator + Phone",
+      "configurations": ["Emulator", "Phone"]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+name: firststep_mobile
+description: "FirstStep Mobile — Focus mock (unified Today / Applications / Job board)"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_svg: ^2.4.0
+  shared_preferences: ^2.3.3
+  url_launcher: ^6.3.3
+  share_plus: ^10.1.4
+  video_player: ^2.9.2
+  auth0_flutter: ^3.2.0
+  http: ^1.6.0
+  firebase_core: ^3.8.1
+  firebase_messaging: ^15.1.5
+  image_picker: ^1.1.2
+  gal: ^2.3.1
+  pdfx: ^2.11.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/icons/
+    - assets/icons/firststep-logo.png
+    - assets/scoutx/logos/
+  fonts:
+    - family: Geologica
+      fonts:
+        - asset: assets/fonts/Geologica-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Geologica-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Geologica-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Geologica-Bold.ttf
+          weight: 700
