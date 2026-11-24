@@ -22,6 +22,6 @@ workflows:
       - name: Test
         script: flutter test
       - name: Build iOS simulator app
-        script: flutter build ios --simulator --debug
+        script: flutter build ios --simulator --debug --dart-define=API_BASE_URL=https://firststep-backend-czn5.onrender.com
     artifacts:
       - build/ios/iphonesimulator/*.app
