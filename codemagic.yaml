@@ -1,0 +1,27 @@
+# Codemagic reads this from the repo root. No Dart file imports it.
+# First workflow compiles and tests iOS on a Mac without Apple signing.
+# Add ios_signing and `flutter build ipa` after the Apple team and certificates exist.
+workflows:
+  ios-tests:
+    name: iOS tests
+    max_build_duration: 60
+    environment:
+      flutter: stable
+      xcode: latest
+    triggering:
+      events:
+        - push
+      branch_patterns:
+        - pattern: main
+          include: true
+    scripts:
+      - name: Get Flutter packages
+        script: flutter pub get
+      - name: Analyze
+        script: flutter analyze --no-fatal-infos --no-fatal-warnings
+      - name: Test
+        script: flutter test
+      - name: Build iOS without codesign
+        script: flutter build ios --no-codesign --release
+    artifacts:
+      - build/ios/iphoneos/*.app
