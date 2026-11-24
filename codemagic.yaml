@@ -1,5 +1,5 @@
 # Codemagic reads this from the repo root. No Dart file imports it.
-# First workflow compiles and tests iOS on a Mac without Apple signing.
+# Simulator .app is what App Preview → Quick launch can run in the browser.
 # Add ios_signing and `flutter build ipa` after the Apple team and certificates exist.
 workflows:
   ios-tests:
@@ -21,7 +21,7 @@ workflows:
         script: flutter analyze --no-fatal-infos --no-fatal-warnings
       - name: Test
         script: flutter test
-      - name: Build iOS without codesign
-        script: flutter build ios --no-codesign --release
+      - name: Build iOS simulator app
+        script: flutter build ios --simulator --debug
     artifacts:
-      - build/ios/iphoneos/*.app
+      - build/ios/iphonesimulator/*.app
